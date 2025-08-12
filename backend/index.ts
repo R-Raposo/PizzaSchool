@@ -14,8 +14,8 @@ const smtpPort = process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT) : 587;
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
-    from: `jacquelyn.mayer55@ethereajl.email`,
-    to: "jacquelyn.mayer55@ethereajl.email",
+    from: 'jacquelyn.mayer55@ethereajl.email',
+    to: 'jacquelyn.mayer55@ethereajl.email',
     port: 587,
     auth: {
         user: 'jacquelyn.mayer55@ethereal.email',
