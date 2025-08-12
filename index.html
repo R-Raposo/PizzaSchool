@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Academy - Workshops & Cursos de Pizza</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span class="pizza-emoji">🍕</span>
+                Pizza Academy
+            </div>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#workshops">Workshops</a></li>
+                <li><a href="#interest">Interesse</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Aprende a Arte da Pizza Autêntica</h1>
+            <p>Workshops práticos onde descobres os segredos da verdadeira pizza italiana. Da massa ao forno, torna-te num mestre pizzaiolo!</p>
+            <a href="#interest" class="cta-button">Manifesta o teu Interesse 🍕</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">O Teu Instrutor</h2>
+            <div class="about-content">
+                <div class="about-image">👨‍🍳</div>
+                <div class="about-text">
+                    <h3>Mestre Pizzaiolo com Paixão</h3>
+                    <p>Com mais de 15 anos de experiência na arte da pizza, desenvolvi técnicas únicas que combinam tradição italiana com inovação moderna. Trabalhei em pizzarias premiadas e agora quero partilhar este conhecimento contigo.</p>
+                    <p>A minha filosofia é simples: a pizza perfeita começa com ingredientes de qualidade, técnica apurada e muita paixão. Nos meus workshops, vais aprender não só a fazer pizza, mas a compreender cada elemento que torna uma pizza verdadeiramente especial.</p>
+                    <p><strong>Especialidades:</strong> Massa tradicional napolitana, fermentação lenta, técnicas de moldagem, gestão de temperaturas de forno e combinações de ingredientes autênticos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workshops" class="workshops">
+        <div class="container">
+            <h2 class="section-title">Os Nossos Workshops</h2>
+            <div class="workshop-grid">
+                <div class="workshop-card">
+                    <span class="workshop-emoji">🥖</span>
+                    <h4>Fundamentos da Massa</h4>
+                    <p>Aprende a preparar a massa perfeita desde o zero. Técnicas de hidratação, fermentação e moldagem que fazem toda a diferença no resultado final.</p>
+                </div>
+                
+                <div class="workshop-card">
+                    <span class="workshop-emoji">🔥</span>
+                    <h4>Técnicas de Forno</h4>
+                    <p>Domina a arte do forno - desde fornos domésticos até fornos a lenha. Temperaturas, timing e truques para obter a crocância perfeita.</p>
+                </div>
+                
+                <div class="workshop-card">
+                    <span class="workshop-emoji">🧀</span>
+                    <h4>Ingredientes & Combinações</h4>
+                    <p>Descobre como escolher os melhores ingredientes e criar combinações irresistíveis. Molhos caseiros, queijos artesanais e mais.</p>
+                </div>
+                
+                <div class="workshop-card">
+                    <span class="workshop-emoji">👥</span>
+                    <h4>Workshop Completo</h4>
+                    <p>Experiência completa de 4 horas onde cobrimos tudo: massa, molhos, técnicas de forno e criarás 3 pizzas diferentes para levar para casa.</p>
+                </div>
+                
+                <div class="workshop-card">
+                    <span class="workshop-emoji">🏢</span>
+                    <h4>Workshops Empresariais</h4>
+                    <p>Team building único para empresas. Uma experiência divertida e saborosa que une equipas através da arte culinária.</p>
+                </div>
+                
+                <div class="workshop-card">
+                    <span class="workshop-emoji">🎂</span>
+                    <h4>Eventos Especiais</h4>
+                    <p>Celebrações de aniversário, despedidas de solteiro/a, ou qualquer ocasião especial. Tornamos o teu evento inesquecível!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interest" class="interest-form">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Manifesta o Teu Interesse</h2>
+            <div class="form-container">
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">
+                    Interessado/a nos nossos workshops de pizza? Deixa os teus dados e entraremos em contacto para te dar mais informações e avisaremos quando começarmos!
+                </p>
+                
+                <form id="interestForm">
+                    <div class="form-group">
+                        <label for="name">Nome *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(opcional)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Conta-nos um pouco sobre o teu interesse</label>
+                        <textarea id="message" name="message" placeholder="Exemplo: 'Quero abrir um restaurante de pizzas', 'Gostava de aprender para ocasiões familiares', 'Interesse em workshops para a minha empresa', etc." rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Deixar Contacto 🚀</button>
+                    
+                    <div id="successMessage" class="success-message">
+                        Obrigado pelo teu contacto! Entraremos em contacto em breve para falar sobre os workshops. 🍕
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacta-nos</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>📧 Email:</strong> info@pizzaacademy.pt
+                </div>
+                <div class="contact-item">
+                    <strong>📱 Telefone:</strong> +351 xxx xxx xxx
+                </div>
+                <div class="contact-item">
+                    <strong>📍 Localização:</strong> Setúbal, Portugal
+                </div>
+                <div class="contact-item">
+                    <strong>🕐 Disponibilidade:</strong> Segunda a Sábado, 9h-18h
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Pizza Academy. Todos os direitos reservados. Feito com ❤️ e 🍕</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
