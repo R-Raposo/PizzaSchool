@@ -14,7 +14,8 @@ const smtpPort = process.env.SMTP_PORT ? parseInt(process.env.SMTP_PORT) : 587;
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
-    to: "jacquelyn.mayer55@ethereal.email",
+    from: `jacquelyn.mayer55@ethereajl.email`,
+    to: "jacquelyn.mayer55@ethereajl.email",
     port: 587,
     auth: {
         user: 'jacquelyn.mayer55@ethereal.email',
@@ -40,7 +41,6 @@ app.post('/api/send', async (req: Request, res: Response) => {
     }
     try {
         await transporter.sendMail({
-            from: `Pizza Academy <${process.env.SMTP_USER}>`,
             subject: 'Novo interesse em workshop de pizza',
             text: `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone || ''}\nMensagem: ${message || ''}`,
             html: `<h2>Novo interesse em workshop de pizza</h2><ul><li><b>Nome:</b> ${name}</li><li><b>Email:</b> ${email}</li><li><b>Telefone:</b> ${phone || ''}</li><li><b>Mensagem:</b> ${message || ''}</li></ul>`
