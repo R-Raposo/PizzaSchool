@@ -25,7 +25,7 @@ document.getElementById('interestForm').addEventListener('submit', async functio
 
     // Send data to backend
     try {
-        const response = await fetch('http://localhost:3001/api/send', {
+        const response = await fetch('https://pizzaschool.onrender.com/api/send', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
