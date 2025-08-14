@@ -11,10 +11,24 @@ body {
     overflow-x: hidden;
 }
 
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    .header-container {
+        padding: 0 10px;
+    }
 }
 
 /* Header */
@@ -22,7 +36,6 @@ header {
     background: linear-gradient(135deg, #d62525, #f48836);
     color: white;
     padding: 1rem 0;
-    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -37,7 +50,7 @@ nav {
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -147,6 +160,7 @@ nav a:hover {
     animation: fadeInUp 1s ease;
     max-width: 800px;
     z-index: 3;
+    padding: 0 10px;
 }
 
 @keyframes fadeInUp {

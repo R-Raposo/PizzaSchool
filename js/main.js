@@ -55,7 +55,7 @@ window.addEventListener('scroll', () => {
     const parallax = document.querySelector('.hero');
     const speed = scrolled * 0.5;
     if (parallax) {
-        parallax.style.backgroundPositionY = speed + 'px';
+        // parallax.style.backgroundPositionY = speed + 'px';
     }
 });
 
