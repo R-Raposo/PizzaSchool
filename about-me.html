@@ -37,14 +37,14 @@
             <div class="about-content">
                 <div class="profile-images">
                     <div class="profile-main">
-                        <img src="images/pizzaiolo-main.png" alt="Foto do Formador" class="profile-main-img">
+                        <img src="images/pizzaiolo-main-smaller.png" alt="Formador Luís Amaral" class="profile-main-img" data-img="images/pizzaiolo-main.png">
                     </div>
                     <div class="profile-gallery">
-                        <div class="profile-secondary">
-                            🍕
+                        <div class="profile-secondary" data-img="images/pizzaiolo-secondary-1.png">
+                            <img src="images/pizzaiolo-secondary-1-smaller.png" alt="Pizzaiolo Luís Amaral" class="profile-main-img" style="object-position: center 30%;">
                         </div>
-                        <div class="profile-secondary">
-                            🔥
+                        <div class="profile-secondary" data-img="images/pizzaiolo-secondary-2.png">
+                            <img src="images/pizzaiolo-secondary-2-smaller.png" alt="Luís Amaral a meter uma pizza num forno de lenha" class="profile-main-img" style="object-position: center 60%;">
                         </div>
                         <div class="profile-secondary">
                             👥
@@ -53,6 +53,11 @@
                             🏆
                         </div>
                     </div>
+                </div>
+
+                <div id="profile-modal" class="profile-modal">
+                    <span class="profile-modal-close">&times;</span>
+                    <img id="profile-modal-img" src="" alt="Imagem ampliada" class="profile-modal-img">
                 </div>
                 
                 <div class="about-text">
@@ -227,4 +232,5 @@
     <button class="scroll-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
 </body>
 <script src="js/main.js"></script>
+<script src="js/about-me.js"></script>
 </html>
