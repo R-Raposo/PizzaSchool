@@ -82,5 +82,17 @@ document.querySelectorAll('.workshop-card').forEach(card => {
     observer.observe(card);
 });
 
-// Console log for debugging (remove in production)
-console.log('Pizza Academy website loaded successfully! 🍕');
+
+const scrollBtn = document.querySelector('.scroll-to-top');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        scrollBtn.style.opacity = '1';
+        scrollBtn.style.pointerEvents = 'auto';
+    } else {
+        scrollBtn.style.opacity = '0';
+        scrollBtn.style.pointerEvents = 'none';
+    }
+});
+scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});

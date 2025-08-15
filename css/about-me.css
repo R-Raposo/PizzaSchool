@@ -86,6 +86,7 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
+
 /* Hero Section */
 .hero {
     background: 
@@ -188,27 +189,6 @@ nav a:hover {
     opacity: 0.9;
 }
 
-.cta-button {
-    background: linear-gradient(45deg, #ff6b35, #ff9500);
-    color: white;
-    padding: 15px 40px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
-    z-index: 10;
-    position: relative;
-    display: inline-block;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255,107,53,0.4);
-}
-
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255,107,53,0.6);
-}
-
 /* Section Styles */
 section {
     padding: 3rem 0;
@@ -232,19 +212,32 @@ section {
     border-radius: 2px;
 }
 
+
 /* About Section */
-.about {
+
+.about-me-hero-content {
+    animation: fadeInUp 1s ease;
+    max-width: 1000px;
+    z-index: 3;
+    padding: 0 10px;
+    margin-top: -5rem;
+}
+
+.about-me {
     background: #f8f9fa;
 }
 
-.about-content {
+.about-me-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 50px;
     align-items: center;
+    border-radius:25px;
+    padding:60px;
+    background: #f8f9fa;
 }
 
-.about-image {
+.about-me-image {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -253,70 +246,41 @@ section {
     align-items: center;
     justify-content: center;
     font-size: 8rem;
-    animation: float 3s ease-in-out infinite;
     box-shadow: 0 10px 30px rgba(255,107,53,0.3);
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-}
-
-.about-text h3 {
+.about-me-text h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #d32f2f;
 }
 
-.about-text p {
+.about-me-text p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    color:black;
 }
-
-/* Workshops Section */
-.workshops {
-    background: white;
-}
-
-.workshop-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.workshop-card {
-    background: white;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.workshop-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    border-color: #ff6b35;
-}
-
-.workshop-emoji {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    display: block;
-}
-
-.workshop-card h4 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #d32f2f;
-}
-
-.workshop-card p {
-    color: #666;
-    line-height: 1.6;
+.scroll-to-top {
+    /* display: none; */
+    display: flex;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 9999;
+    background: linear-gradient(45deg, #ff6b35, #ff9500);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(255,107,53,0.4);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+    padding-bottom:5px;
 }
 
 /* Interest Form */
@@ -429,26 +393,4 @@ footer {
 .about-link-btn:hover {
     background: linear-gradient(90deg, #ff6b35 60%, #ff9500 100%);
     transform: translateY(-2px) scale(1.04);
-}
-
-.scroll-to-top {
-    /* display: none; */
-    display: flex;
-    position: fixed;
-    bottom: 30px;
-    right: 20px;
-    z-index: 9999;
-    background: linear-gradient(45deg, #ff6b35, #ff9500);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    font-size: 2rem;
-    box-shadow: 0 4px 15px rgba(255,107,53,0.4);
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.3s;
-    padding-bottom:5px;
 }
