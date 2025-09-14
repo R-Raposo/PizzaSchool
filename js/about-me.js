@@ -38,3 +38,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Form submission
+document.getElementById('interestForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Get form data
+    const formData = new FormData(this);
+
+    // Send email using EmailJS
+    emailjs.send("segredo_da_massa","template_contacto",{
+                name: formData.get('name'),
+                contact_email: formData.get('email'),
+                contact_phone: formData.get('phone'),
+                message: formData.get('message'),
+            }).then(
+                (response) => {
+                    document.getElementById('successMessage').style.display = 'block';
+                    this.reset();
+                    setTimeout(() => {
+                        document.getElementById('successMessage').style.display = 'none';
+                    }, 5000);
+                },
+                (error) => {
+                    alert(error || 'Erro ao enviar o formulário.');
+                },
+            );
+});

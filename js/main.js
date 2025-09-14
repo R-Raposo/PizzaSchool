@@ -18,35 +18,25 @@ document.getElementById('interestForm').addEventListener('submit', async functio
 
     // Get form data
     const formData = new FormData(this);
-    const data = {};
-    for (let [key, value] of formData.entries()) {
-        data[key] = value;
-    }
 
-    // Send data to backend
-    try {
-        const response = await fetch('https://pizzaschool.onrender.com/api/send', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-
-        if (response.ok) {
-            document.getElementById('successMessage').style.display = 'block';
-            this.reset();
-            setTimeout(() => {
-                document.getElementById('successMessage').style.display = 'none';
-            }, 5000);
-        } else {
-            const result = await response.json();
-            alert(result.error || 'Erro ao enviar o formulário.');
-        }
-    } catch (err) {
-        alert('Erro de conexão com o servidor.');
-        console.error('Erro ao enviar:', err);
-    }
+    // Send email using EmailJS
+    emailjs.send("segredo_da_massa","template_contacto",{
+                name: formData.get('name'),
+                contact_email: formData.get('email'),
+                contact_phone: formData.get('phone'),
+                message: formData.get('message'),
+            }).then(
+                (response) => {
+                    document.getElementById('successMessage').style.display = 'block';
+                    this.reset();
+                    setTimeout(() => {
+                        document.getElementById('successMessage').style.display = 'none';
+                    }, 5000);
+                },
+                (error) => {
+                    alert(error || 'Erro ao enviar o formulário.');
+                },
+            );
 });
 
 // Add some interactive animations on scroll
