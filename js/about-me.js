@@ -15,6 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Awards images click event
+    document.querySelectorAll('.cert-image').forEach(item => {
+        item.addEventListener('click', () => {
+            const imgSrc = item.getAttribute('data-img');
+            if (imgSrc) {
+                profileModalImg.src = imgSrc;
+                profileModal.classList.add('active');
+            }
+        });
+    });
+
     // Main profile image click event
     const mainProfileImg = document.querySelector('.profile-main-img[data-img]');
     if (mainProfileImg) {
